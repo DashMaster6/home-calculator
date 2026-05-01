@@ -1,2 +1,2 @@
-# home-calculator
+# Home-Calculator
 A calculator that will show you if you can afford a home
