@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home Calculator</title>
+    <title>House Hacking Calculator</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f0f2f5; display: flex; justify-content: center; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; }
+        #result { margin-top: 20px; line-height: 1.5; }
+    </style>
 </head>
 <body>
-    <h1>House Hacking Calculator</h1>
-    <pre id="output"></pre>
-    <script src="https://raw.githubusercontent.com/DashMaster6/home-calculator/main/calculator.js"></script>
+
+<div class="card">
+    <h2>House Hacking Calc</h2>
+    
+    <label>Target Home Price ($)</label>
+    <input type="number" id="homePrice" value="400000">
+
+    <label>Your Max Down Payment Budget ($)</label>
+    <input type="number" id="budgetPrice" value="10000">
+
+    <label>Your Max Monthly Budget ($)</label>
+    <input type="number" id="budgetPay" value="1600">
+
+    <button onclick="calculateAffordability()">Run Calculator</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="calculator.js"></script>
 </body>
 </html>
